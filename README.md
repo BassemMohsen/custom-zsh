@@ -1,11 +1,11 @@
 ## Customized oh-my-zsh 
 
-A repository for a simple oh-my-zsh setup 
+A repository for a custom oh-my-zsh setup.
 
 ### Prerequisites
 
 * Unix-based operating system (MAC OS or Linux)
-* [Zsh](http://www.zsh.org) should be installed 
+* [Zsh](http://www.zsh.org)
 * `wget`
 * `git`
 
@@ -15,8 +15,7 @@ A repository for a simple oh-my-zsh setup
 ./setup-custom-zsh.sh
 ```
 
-The script installs oh-my-zsh using wget and copies the custom .screenrc and a custom .zsh file which includes useful shell commands and aliases. 
-If you want to uninstall `oh-my-zsh` and revert the changes, just run `uninstall_oh_my_zsh` from the command-line.
+The script installs oh-my-zsh using wget and creates symbolic links the custom .screenrc and a custom .zsh file which includes useful shell commands and aliases. If you want to uninstall `oh-my-zsh` and revert the changes, just run `uninstall_oh_my_zsh` from the command-line.
 
 ### References
 

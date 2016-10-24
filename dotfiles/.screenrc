@@ -1,3 +1,34 @@
-# Disable startup message
+# ============================================================
+# Make the screen sesions looks nicer. This configuration
+# should be copied to the remote machines accessed via screen.
+# ============================================================
 
+# http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html
+
+# use default shell
+shell -${SHELL}
+# no startup message
 startup_message off
+# set scrollback size
+defscrollback 10000
+# messages timeout after 1 second
+msgwait 1
+
+# hardstatus line is the last line
+hardstatus on
+hardstatus alwayslastline
+# explanation of hardstatus:
+# %{= KW}
+#     use bright white on black color
+# %H
+#     hostname
+# %l
+#     system load
+# %-Lw%{= WK}%n %t%{-}%+Lw
+#     list open windows, centered on the active window listed in black on white
+# %d-%m-%Y %c
+#     date and time
+hardstatus string "%{= KW} @%H %l || %-Lw%{= WK}%n %t%{-}%+Lw || %d-%m-%Y %c"
+
+# use a caption line on top of hardstatus
+#caption always "%n (%t) : %c
