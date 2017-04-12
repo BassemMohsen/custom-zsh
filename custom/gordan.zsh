@@ -89,3 +89,26 @@ netstatg() {
 tcptracki() {
     sudo tcptrack -f -i $1 
 }
+
+# Copy the current working directory to clipboard
+# Usage: cbwd
+cbwd() {
+    if ! type xclip > /dev/null 2>&1; then
+        echo "You must have xclip installed"
+        return
+    fi
+    pwd | xclip -selection c
+    echo "`pwd` copied to clipboard"
+}
+
+# Copy the current working directory to clipboard
+# Usage: cbf <file>
+cbf() {
+    if ! type xclip > /dev/null 2>&1; then
+        echo "You must have xclip installed"
+        return
+    fi
+
+    cat "$1" | xclip -selection c
+    echo "File $1 content copied to clipboard"
+}
