@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 CUSTOM_ALIASES=$HOME/.oh-my-zsh/custom/gordan.zsh
 CUSTOM_SCREENRC=$HOME/.screenrc
 
